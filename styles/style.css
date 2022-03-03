@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+* {
+    font-family: "Quicksand";
+}
+
+button {
+    background-color: rgb(255, 166, 0);
+    border-radius: 15px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+} 
+
+button:hover {
+    background-color: rgb(255, 136, 0);
+}
+
+header {
+    background-color: #383838;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    justify-items: center;
+    height: 80px;
+
+    /* background-color: #00879c; */
+}
+
+header h1 {
+    grid-column-start: 1;
+    font-size: 45px;
+    color: #00879c;
+    margin:auto
+}
+
+header form {
+    grid-column-start: 2;
+}
+
+header form label {
+    font-size: 20px;
+    color: white;
+    margin-right: 10px;
+}
+
+header form input {
+    width: 240px;
+    margin: auto 5px;
+    border-radius: 12px;
+    height: 20px;
+    padding-left: 10px;
+}
+
+
+#books-list {
+    list-style-type: none;
+    margin: auto;
+    max-width: 1020px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(90px, auto);
+    grid-gap: 1px;
+    padding: 0;
+}
+
+.book-element {
+    border: 1px solid #383838;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 2px 2px 5px #686868;
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    grid-template-rows: 75px 45px 180px auto;
+    background-color: #383838;
+    grid-gap: 1px;
+    grid-template-areas: 
+    "book-h2 book-h2"
+    "book-authors book-authors"
+    "book-img book-info"
+    "book-description book-description";
+}
+
+.book-element > div {
+    background-color: white;
+}
+
+.book-element h2 {
+    display: block;
+    color: #00879c;
+    font-size: 20px;
+    height: fit-content;
+    grid-area: book-h2; 
+    text-align: center;
+    justify-self: center;
+}
+
+.book-element img {
+    height: 180px;
+    width: 125px;
+    grid-area: book-img;
+}
+
+.book-authors{
+    grid-area: book-authors;
+    height: inherit;
+    width: initial;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.book-info{
+    grid-area: book-info;
+    padding-top: 15px;
+}
+
+.book-info-description {
+    padding: 10px;
+    grid-area: book-description;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#rest-text {
+    display: none;
+}
+
+@media screen and (max-width:815px){
+    #books-list {
+        list-style-type: none;
+        margin: auto;
+        max-width: 1020px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(90px, auto);
+        grid-gap: 1px;
+        padding: 0;
+    }
+
+    header {
+        background-color: #383838;
+        display: grid;
+        grid-template-columns: 0px 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: auto;
+    }
+
+    header h1 {
+        grid-row-start: 1;
+        grid-column-start: 2;
+        font-size: 45px;
+        color: #00879c;
+        margin:auto;
+        text-align: center;
+        justify-self: center;
+    }
+    
+    header form {
+        grid-row-start: 2;
+        text-align: center;
+    }
+
+    header form label {
+        display: none;
+    }
+}

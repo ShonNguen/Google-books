@@ -1,0 +1,17 @@
+{
+  "name": "homework_01",
+  "version": "1.0.0",
+  "description": "homework 01",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test",
+    "start": "lite-server",
+    "server": "json-server --watch db.json"
+  },
+  "author": "Shon Nguen",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
